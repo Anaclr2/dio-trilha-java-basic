@@ -1,6 +1,3 @@
-import java.util.Scanner;
-
-
 public class ContaTerminal {
     public static void main(String[] args) throws Exception {
         
@@ -10,19 +7,19 @@ public class ContaTerminal {
 
         //exibir as mensagens para usuarios
 
-        System.out.println("Por favor, digite o número da Conta:");
-        int numero = scanner.nextInt(); 
-
+        System.out.print("Por favor, digite o número da Conta: ");
+        int numero = scanner.nextInt();
         scanner.nextLine(); 
 
-        System.out.println("Por favor, digite o número da Agência:");
+        System.out.print("Por favor, digite o número da Agência: ");
         String agencia = scanner.nextLine();
 
-        System.out.println("Por favor, digite o nome do Cliente:");
-        String nomeCliente = scanner.nextLine(); 
+        System.out.print("Por favor, digite o nome do Cliente: ");
+        String nomeCliente = scanner.nextLine();
 
-        System.out.println("Por favor, digite o saldo:");
-        double saldo = scanner.nextDouble(); 
+        System.out.print("Por favor, digite o saldo: ");
+        String saldoStr = scanner.nextLine().replace(",", ".");
+        double saldo = Double.parseDouble(saldoStr);
 
 
         //obter pela class scanner os valores digitado no terminal
@@ -45,6 +42,7 @@ public class ContaTerminal {
                 " e seu saldo " + saldo + " já está disponível para saque.");
 
         scanner.close(); 
+
 
     }
 }
